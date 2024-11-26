@@ -1,0 +1,65 @@
+
+.container {
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  .btn {
+    margin: 20px;
+  }
+  
+  .aside-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transition: right 0.3s ease; 
+    z-index: 1000;
+  }
+  
+
+  .aside-menu.open {
+    right: 0;
+  }
+  
+  /* Bouton pour fermer l'aside */
+  .close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+  }
+  
+  /* Liste d'options dans l'aside */
+  .aside-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 20px;
+  }
+  
+  .aside-menu ul li {
+    margin: 10px 0;
+  }
+  
+  .aside-menu ul li a {
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .aside-menu ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contenu principal (décalage optionnel si l'aside est ouvert) */
+  .content {
+    padding: 20px;
+  }
+  

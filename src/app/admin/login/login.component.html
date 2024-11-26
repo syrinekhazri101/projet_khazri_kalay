@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Se Connecter</h2>
+    <form [formGroup]="formadmin" (ngSubmit)="loginadmin()">
+      <div>
+        <label for="user">Nom d'utilisateur</label>
+        <input id="user" type="text" formControlName="user" class="form-control">
+      </div>
+      <div>
+        <label for="password">Mot de passe</label>
+        <input id="password" type="password" formControlName="password" class="form-control">
+      </div>
+      
+      <button  class="btn btn-sucess" type="submit" [disabled]="formadmin.invalid">Se connecter</button>
+      <button type="button" (click)="onResetForm()">Effacer</button>
+    </form>
+  </div>
+  

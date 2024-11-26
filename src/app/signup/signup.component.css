@@ -1,0 +1,36 @@
+.c1{
+  width: 100%;
+  max-width: 400px;
+  background: #1e1e1e; /* Fond légèrement moins sombre */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+  text-align: center;
+
+}
+body {
+ background-color: azure;
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+label {
+
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Texte blanc */
+}
+input{
+  background-color: #1e1e1e;
+  border:1px solid  #ffffff;
+  border-radius: 5px;
+
+}
+input::placeholder {
+  color: #888888; /* Couleur grise */
+  font-style: italic; /* Facultatif : style du texte */
+}

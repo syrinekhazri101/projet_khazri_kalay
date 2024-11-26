@@ -1,0 +1,32 @@
+<form [formGroup]="modifyForm" (ngSubmit)="onSubmit()" novalidate class="form-container">
+    <h3>Modifier le produit</h3>
+
+    <label for="productId">Identifiant du produit:</label>
+    <input type="text" id="productId" formControlName="id" readonly />
+
+    <label for="productName">Nom du produit:</label>
+    <input type="text" id="productName" formControlName="nom" />
+    <label for="productphoto">photo du produit:</label>
+    <input type="text" id="productphoto" formControlName="photo" />
+
+    <label for="productManufacturer">Fabricant:</label>
+    <input type="text" id="productManufacturer" formControlName="fabricant" />
+
+    <label for="productPrice">Prix:</label>
+    <input type="text" id="productPrice" formControlName="prix" />
+
+    <label for="productDescription">Description:</label>
+    <input type="text" id="productDescription" formControlName="description" />
+
+    <label for="productWarranty">Garantie du produit:</label>
+    <input type="text" id="productWarranty" formControlName="garantie" />
+
+    <label for="productAvailability">Disponibilité:</label>
+    <input type="text" id="Disponibilité" formControlName="Disponibilité" />
+
+    <label for="inStock" class="checkbox-label">en Stock<br>
+      <input type="text" id="enStock" formControlName="enStock" />
+    </label>
+
+    <button type="submit" >Modifier</button>
+  </form>

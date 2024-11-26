@@ -1,0 +1,53 @@
+
+
+<div class="card text-center" width="540px">
+    <div class="card-header bg-secondary text-light">
+     <h1>{{produit.nom}}</h1>
+    </div>
+    <div class="card-body">
+      <img [src]="produit.photo" alt="img" width="350px">
+      <h5 class="card-title">description</h5>
+      <p class="card-text">{{produit.description}}</p>
+  
+    </div>
+    <div class="card-footer text-body-secondary">
+      <h5 class="card-title">disponibile dans </h5>
+      <p class="card-text">
+        @for (item of produit.disponibilite; track $index) {
+          {{item}}<br>
+        }
+        </p>
+    </div>
+    <div class="card-footer text-body-secondary">
+      <h5 class="card-title">
+        <p class="card-title" [ngClass]="{
+          'c2': produit.enStock,
+          'c1': !produit.enStock,
+        }">
+          @if(produit.enStock){
+            en Stock
+          }
+          @else {
+            Rupture de stock
+          }
+    </p>
+      </h5>
+  
+    </div>
+    <div class="card-footer text-body-secondary">
+      <h5 class="card-title">fabricant</h5>
+      <p class="card-title">{{produit.fabricant}}</p>
+    </div>
+    <div class="card-footer text-body-secondary">
+      <h5 class="card-title">prix</h5>
+      <p class="card-title">{{produit.prix}}</p>
+    </div>
+  
+    <div class="card-footer text-body-secondary">
+  
+      <h5 class="card-title">garantie
+      </h5>
+      {{produit.garantie}}
+    </div>
+  
+  

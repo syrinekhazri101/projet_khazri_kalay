@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Signup</title>
+
+
+</head>
+<body>
+  @if(connexion){
+
+          <div class="c1" >
+<h3>Créer un compte</h3>
+            <form  (ngSubmit)="onSubmit()"  [formGroup]="compteForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nom complet</label>
+                <input type="text" class="form-control" id="name" placeholder="Votre nom" formControlName="nom_complet" required>
+              </div>
+
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Adresse email</label>
+                <input type="email" class="form-control" id="email" placeholder="email@example.com" formControlName="adresse_email"  required>
+              </div>
+
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Mot de passe" formControlName="mot_de_passe" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="confirm-password" class="form-label">Confirmer le mot de passe</label>
+                <input type="password" class="form-control" id="confirm-password" placeholder="Confirmer le mot de passe" formControlName="confirmPassword"  required>
+              </div>
+
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
+              </div>
+            </form>
+            <div class="card-footer text-center">
+              <p>Vous avez déjà un compte ? <button (click)="connecter()" class="btn btn-link">Se connecter</button></p>
+            </div>
+          </div>
+
+
+
+}
+@else{
+
+          <div  class="c1" >
+            <h3>Connectez-vous</h3>
+
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <!-- Champ Nom -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Nom complet</label>
+                <input type="text" class="form-control" id="name" placeholder="Votre nom" formControlName="name" required>
+              </div>
+
+
+
+              <!-- Champ Mot de passe -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Mot de passe" formControlName="password"  required>
+              </div>
+
+
+
+              <!-- Bouton d'inscription -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">connecter</button>
+              </div>
+            </form>
+          </div>
+ </div>
+}
+</body>
+</html>
